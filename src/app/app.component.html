@@ -13,44 +13,44 @@
         </thead>
         <tbody>
             <tr>
-                <th>{{Nombre}}</th>
-                <th>uppercase</th>
-                <th>{{Nombre | uppercase}} </th>
+                <td>{{Nombre}}</td>
+                <td>uppercase</td>
+                <td>{{Nombre | uppercase}} </td>
             </tr>
             <tr>
-                <th>{{Nombre}}</th>
-                <th>lowercase</th>
-                <th>{{Nombre | lowercase}} </th>
+                <td>{{Nombre}}</td>
+                <td>lowercase</td>
+                <td>{{Nombre | lowercase}} </td>
             </tr>
             <tr>
-                <th>{{Nombre}}</th>
-                <th>slice</th>
-                <th>{{Nombre | slice:3}} </th>
+                <td>{{Nombre}}</td>
+                <td>slice</td>
+                <td>{{Nombre | slice:3}} </td>
             </tr>
             <tr>
-                <th>{{Nombre}}</th>
-                <th>slice:0:3</th>
-                <th>{{Nombre | slice:0 : 3}} </th>
+                <td>{{Nombre}}</td>
+                <td>slice:0:3</td>
+                <td>{{Nombre | slice:0 : 3}} </td>
             </tr>
             <tr>
-                <th>{{arreglo}}</th>
-                <th>slice:0:3</th>
-                <th>{{arreglo | slice:0 : 3}} </th>
+                <td>{{arreglo}}</td>
+                <td>slice:0:3</td>
+                <td>{{arreglo | slice:0 : 3}} </td>
             </tr>
             <tr>
-                <th>{{pi}}</th>
-                <th>number</th>
-                <th>{{pi | number}} </th>
+                <td>{{pi}}</td>
+                <td>number</td>
+                <td>{{pi | number}} </td>
             </tr>
             <tr>
-                <th>{{pi}}</th>
-                <th>number</th>
-                <th>{{pi | number : '3.'}} </th>
+                <td>{{pi}}</td>
+                <td>number</td>
+                <td>{{pi | number : '3.'}} </td>
             </tr>
             <tr>
-                <th>{{pi}}</th>
-                <th>number</th>
-                <th>{{pi | number : '3.0-6'}} </th>
+                <td>{{pi}}</td>
+                <td>number</td>
+                <td>{{pi | number : '3.0-6'}} </td>
             </tr>
             <tr>
                 <th>{{ porcentaje}}</th>
@@ -103,26 +103,31 @@
                 <th>{{ fecha | date:'dd-MMM-yyyy'}} </th>
             </tr>
             <tr>
-                <th>{{persona }}</th>
-                <th>json</th>
-                <th>{{ persona| json}} </th>
+                <td>{{persona }}</td>
+                <td>json</td>
+                <td>{{ persona| json}} </td>
             </tr>
             <!-- pipes personalizados -->
             <tr>
-                <th>{{ nombre2}}</th>
-                <th>capitalizado</th>
-                <th>{{ nombre2 |capitalizado}} </th>
+                <td>{{ nombre2}}</td>
+                <td>capitalizado</td>
+                <td>{{ nombre2 |capitalizado}} </td>
+            </tr>
+            <tr>
+                <td>{{ Nombre }}</td>
+                <td>contraseña:{{activar}}
+                    <br>
+                    <button (click)="activar = !activar">Activar / Desactivar</button>
+                    <br>
+                </td>
+                <td>{{ Nombre |contrasena:activar}} </td>
             </tr>
         </tbody>
     </table>
 
+    <h4>Youtube <small>videos</small></h4>
+    <hr>
+    <iframe width="550" height="315" allowfullscreen [src]="video | domSanatizer:'https://www.youtube.com/embed/'" frameborder="0"></iframe>
+
 
 </div>
-
-<!-- 
-<tr>
-    <th>{{ }}</th>
-    <th></th>
-    <th>{{ |'}} </th>
-</tr>
- -->

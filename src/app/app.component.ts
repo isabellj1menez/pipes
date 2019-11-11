@@ -21,4 +21,11 @@ export class AppComponent {
     }
   }
   public nombre2:string='IsAbEl JiMenEz'
+
+  public activar: boolean = false;
+
+  public video: string = "wDjeBNv6ip0";
+  
+  
+
 }
